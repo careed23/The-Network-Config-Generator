@@ -1,0 +1,15 @@
+! Generated Configuration
+hostname {{ device.hostname }}
+!
+interface {{ device.interface }}
+ description Uplink to Core
+ ip address {{ device.ip }} {{ device.mask }}
+ no shutdown
+!
+{% for vlan in device.vlans %}
+vlan {{ vlan.id }}
+ name {{ vlan.name }}
+!
+{% endfor %}
+!
+end

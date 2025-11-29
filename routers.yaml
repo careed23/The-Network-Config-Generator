@@ -1,0 +1,18 @@
+---
+- hostname: nashville-core-01
+  interface: GigabitEthernet0/1
+  ip: 192.168.10.1
+  mask: 255.255.255.0
+  vlans:
+    - id: 10
+      name: DATA
+    - id: 20
+      name: VOICE
+
+- hostname: memphis-edge-01
+  interface: GigabitEthernet0/1
+  ip: 10.0.50.1
+  mask: 255.255.255.252
+  vlans:
+    - id: 99
+      name: MANAGEMENT
