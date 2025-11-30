@@ -113,3 +113,62 @@ YAML (Data Serialization)
 [ ] Add unit tests to validate IP address formats.
 
 Created by Colten Reed
+📂 Project Structure
+
+├── templates/
+│   └── cisco_ios.j2       # Jinja2 template for Cisco syntax
+├── routers.yaml           # Source of Truth (Inventory & Variables)
+├── generate.py            # Main Python logic script
+├── requirements.txt       # Dependencies
+└── README.md              # Documentation
+
+
+⚙️ How to Run
+
+1. Clone the repository
+
+git clone [https://github.com/careed23/The-Network-Config-Generator.git](https://github.com/careed23/The-Network-Config-Generator.git)
+cd The-Network-Config-Generator
+
+
+2. Install Dependencies
+
+pip install -r requirements.txt
+
+
+3. Define your Devices
+
+Edit routers.yaml to add your device details:
+
+- hostname: "Core-Router-01"
+  interface: "GigabitEthernet0/1"
+  ip_address: "192.168.10.1"
+  subnet_mask: "255.255.255.0"
+
+
+4. Generate Configs
+
+Run the script:
+
+python3 generate.py
+
+
+Output configurations will print to the console or save to an /output folder (if configured).
+
+🔧 Technology Stack
+
+Python 3.x
+
+Jinja2 (Templating Engine)
+
+YAML (Data Serialization)
+
+🔮 Future Improvements
+
+[ ] Add support for Juniper Junos templates.
+
+[ ] Integrate with Netmiko to push configs directly to devices.
+
+[ ] Add unit tests to validate IP address formats.
+
+Created by Colten Reed
