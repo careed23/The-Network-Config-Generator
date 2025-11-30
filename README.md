@@ -1,14 +1,24 @@
-🌐 Network Configuration Generator
+<h1 align="center">🌐 Network Configuration Generator</h1>
 
-An intelligent infrastructure-as-code tool that automates the generation of standardized network device configurations.
+<div align="center">
+<strong>An intelligent infrastructure-as-code tool that automates the generation of standardized network device configurations.</strong>
+</div>
 
-Quick Start • Features • Documentation
+<br />
 
-📊 Overview
+<div align="center">
+<a href="#-quick-start">Quick Start</a> •
+<a href="#-features">Features</a> •
+<a href="#-documentation">Documentation</a>
+</div>
+
+<hr />
+
+<h2>📊 Overview</h2>
 
 The Network Configuration Generator is a next-generation automation tool designed to eliminate "fat-finger" errors in network deployments. By separating variable data (IPs, VLANs) from configuration logic (Command Syntax), it ensures 100% standardized, idempotent deployments across Cisco IOS and Juniper environments. Built for network administrators moving from manual CLI typing to modern Infrastructure-as-Code (IaC).
 
-🎯 Problem It Solves
+<h3>🎯 Problem It Solves</h3>
 
 Manual Configuration is Risky: One typo in an IP address can take down a subnet.
 
@@ -18,7 +28,7 @@ Slow Deployment: Manually typing commands for 50 switches takes hours.
 
 Lack of Standardization: Different engineers use different syntax for the same task.
 
-✨ Solution
+<h3>✨ Solution</h3>
 
 This engine uses Jinja2 templating and YAML data models to:
 
@@ -30,9 +40,11 @@ Validate Data: Ensure all IP addresses and Subnets are valid before generation.
 
 Multi-Vendor Support: Switch between Cisco and Juniper templates seamlessly.
 
-🚀 Features
+<hr />
 
-Core Capabilities
+<h2>🚀 Features</h2>
+
+<h3>Core Capabilities</h3>
 
 Feature
 
@@ -54,7 +66,9 @@ Generates the exact same configuration every time, ensuring zero drift during de
 
 Capable of generating hundreds of device configurations in seconds using Python's optimized I/O.
 
-📂 Project Structure
+<hr />
+
+<h2>📂 Project Structure</h2>
 
 ├── templates/
 │   └── cisco_ios.j2       # Jinja2 template for Cisco syntax
@@ -64,20 +78,22 @@ Capable of generating hundreds of device configurations in seconds using Python'
 └── README.md              # Documentation
 
 
-⚙️ How to Run
+<hr />
 
-1. Clone the repository
+<h2>⚙️ How to Run</h2>
+
+<h3>1. Clone the repository</h3>
 
 git clone [https://github.com/careed23/The-Network-Config-Generator.git](https://github.com/careed23/The-Network-Config-Generator.git)
 cd The-Network-Config-Generator
 
 
-2. Install Dependencies
+<h3>2. Install Dependencies</h3>
 
 pip install -r requirements.txt
 
 
-3. Define your Devices
+<h3>3. Define your Devices</h3>
 
 Edit routers.yaml to add your device details:
 
@@ -87,7 +103,7 @@ Edit routers.yaml to add your device details:
   subnet_mask: "255.255.255.0"
 
 
-4. Generate Configs
+<h3>4. Generate Configs</h3>
 
 Run the script:
 
@@ -96,7 +112,9 @@ python3 generate.py
 
 Output configurations will print to the console or save to an /output folder (if configured).
 
-🔧 Technology Stack
+<hr />
+
+<h2>🔧 Technology Stack</h2>
 
 Python 3.x
 
@@ -104,7 +122,9 @@ Jinja2 (Templating Engine)
 
 YAML (Data Serialization)
 
-🔮 Future Improvements
+<hr />
+
+<h2>🔮 Future Improvements</h2>
 
 [ ] Add support for Juniper Junos templates.
 
@@ -112,63 +132,8 @@ YAML (Data Serialization)
 
 [ ] Add unit tests to validate IP address formats.
 
-Created by Colten Reed
-📂 Project Structure
+<hr />
 
-├── templates/
-│   └── cisco_ios.j2       # Jinja2 template for Cisco syntax
-├── routers.yaml           # Source of Truth (Inventory & Variables)
-├── generate.py            # Main Python logic script
-├── requirements.txt       # Dependencies
-└── README.md              # Documentation
-
-
-⚙️ How to Run
-
-1. Clone the repository
-
-git clone [https://github.com/careed23/The-Network-Config-Generator.git](https://github.com/careed23/The-Network-Config-Generator.git)
-cd The-Network-Config-Generator
-
-
-2. Install Dependencies
-
-pip install -r requirements.txt
-
-
-3. Define your Devices
-
-Edit routers.yaml to add your device details:
-
-- hostname: "Core-Router-01"
-  interface: "GigabitEthernet0/1"
-  ip_address: "192.168.10.1"
-  subnet_mask: "255.255.255.0"
-
-
-4. Generate Configs
-
-Run the script:
-
-python3 generate.py
-
-
-Output configurations will print to the console or save to an /output folder (if configured).
-
-🔧 Technology Stack
-
-Python 3.x
-
-Jinja2 (Templating Engine)
-
-YAML (Data Serialization)
-
-🔮 Future Improvements
-
-[ ] Add support for Juniper Junos templates.
-
-[ ] Integrate with Netmiko to push configs directly to devices.
-
-[ ] Add unit tests to validate IP address formats.
-
-Created by Colten Reed
+<p align="center">
+<em>Created by <a href="https://www.google.com/search?q=https://linkedin.com/in/colten-reed-8395b6389">Colten Reed</a></em>
+</p
