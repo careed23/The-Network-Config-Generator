@@ -26,18 +26,19 @@ Scalable: Can generate 1 config or 100 configs in seconds.
 
 ⚙️ How to Run
 
-Clone the repository
+1. Clone the repository
 
 git clone [https://github.com/careed23/The-Network-Config-Generator.git](https://github.com/careed23/The-Network-Config-Generator.git)
 cd The-Network-Config-Generator
 
 
-Install Dependencies
+2. Install Dependencies
 
 pip install -r requirements.txt
 
 
-Define your Devices
+3. Define your Devices
+
 Edit routers.yaml to add your device details:
 
 - hostname: "Core-Router-01"
@@ -46,7 +47,8 @@ Edit routers.yaml to add your device details:
   subnet_mask: "255.255.255.0"
 
 
-Generate Configs
+4. Generate Configs
+
 Run the script:
 
 python3 generate.py
@@ -66,7 +68,7 @@ YAML (Data Serialization)
 
 [ ] Add support for Juniper Junos templates.
 
-[ ] Integreate with Netmiko to push configs directly to devices.
+[ ] Integrate with Netmiko to push configs directly to devices.
 
 [ ] Add unit tests to validate IP address formats.
 
