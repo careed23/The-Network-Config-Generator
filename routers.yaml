@@ -1,8 +1,10 @@
 ---
 - hostname: nashville-core-01
+  device_type: cisco_ios
   interface: GigabitEthernet0/1
   ip: 192.168.10.1
   mask: 255.255.255.0
+  description: Uplink to Core
   vlans:
     - id: 10
       name: DATA
@@ -10,9 +12,23 @@
       name: VOICE
 
 - hostname: memphis-edge-01
+  device_type: cisco_ios
   interface: GigabitEthernet0/1
   ip: 10.0.50.1
   mask: 255.255.255.252
+  description: WAN Uplink
   vlans:
     - id: 99
       name: MANAGEMENT
+
+- hostname: atlanta-core-01
+  device_type: juniper_junos
+  interface: ge-0/0/0
+  ip: 172.16.1.1
+  mask: 255.255.255.0
+  description: Uplink to Core
+  vlans:
+    - id: 100
+      name: CORPORATE
+    - id: 200
+      name: GUEST
